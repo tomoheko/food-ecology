@@ -8,7 +8,6 @@
 | family_name       | string     | null: false |
 | first_name        | string     | null: false |
 | birth_date        | date       | null: false |
-| phone_number      | string     | null: false |
 
 ### Association
 - has_many :products
@@ -59,6 +58,7 @@
 | city          | string     | null: false                    |
 | house_number  | string     | null: false                    |
 | building      | string     |                                |
+| phone_number  | string     | null: false                    |
 | order         | references | null: false, foreign_key: true |
 
 ### Association
