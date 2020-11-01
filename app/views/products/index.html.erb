@@ -1,6 +1,5 @@
 <%= render "shared/header" %>
 <div class='main'>
-
   <%= image_tag "top-image.png" %>
   <div class='title-contents'>
     <h2>
@@ -12,8 +11,28 @@
     <p class='service-explain'>
       食品リサイクルアプリです
     </p>
-  
-
+  </div>
+  <% @products.each do |product| %>
+    <li class='list'>
+      <%= link_to product_path(product) do %>
+      <div class='item-img-content'>
+        <%= image_tag product.image.variant(resize: '300x300'), class: "item-img" %>
+      </div>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          <%= product.name %>
+        </h3>
+        <div class='item-quantity'>
+          <%= product.quantity %>
+        </div>
+        <div class='item-price'>
+          <span><%= product.price %>円<br>(税込み)</span>
+        </div>
+      </div>
+      <% end %>
+    </li>
+  <% end %>
+</div>
 
 
 
