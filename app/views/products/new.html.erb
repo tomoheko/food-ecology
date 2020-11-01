@@ -1,10 +1,10 @@
-<div class="items-sell-contents">
-  <header class="items-sell-header">
+<div class="products-sell-contents">
+  <header class="products-sell-header">
 
   </header>
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">商品の情報を入力</h2>
-    <%= form_with model:@item, url:items_path, local: true do |f| %>
+  <div class="products-sell-main">
+    <h2 class="products-sell-title">商品の情報を入力</h2>
+    <%= form_with model:@product, url:products_path, local: true do |f| %>
 
     <%# エラー発生時のメッセージ %>
     <%= render 'shared/error_messages',locals: { message:@message }, model: f.object %>
@@ -19,17 +19,26 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"product-image" %>
       </div>
     </div>
     <%# /出品画像 %>
     <%# 商品名と商品説明 %>
-    <div class="new-items">
+    <div class="new-products">
       <div class="weight-bold-text">
         商品名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :name, class:"products-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      
+      <div class="products-quantity">
+        <div class="weight-bold-text">
+          数量
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :quantity, class:"item-input", id:"item-quantity", placeholder:"例）10kg,100箱など" %>
+      </div>
+      
       <div class="items-explain">
         <div class="weight-bold-text">
           商品の説明
@@ -97,7 +106,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+          <%= f.text_field :price, class:"price-input", id:"product-price", placeholder:"例）3000" %>
         </div>
         <div class="price-content">
           <span>販売手数料 (10%)</span>
