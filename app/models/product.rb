@@ -6,15 +6,16 @@ class Product < ApplicationRecord
   belongs_to_active_hash :shipment_fee
   belongs_to_active_hash :shipment_term
 
-  #空の投稿を保存できないようにする
+  # 空の投稿を保存できないようにする
   with_options presence: true do
     validates :name
     validates :image
+    validates :quantity
     validates :explanation
   end
 
-  ##ジャンルの選択が「--」の時は保存できないようにする
-  with_options numericality: { other_than: 1 }  do
+  # #ジャンルの選択が「--」の時は保存できないようにする
+  with_options numericality: { other_than: 1 } do
     validates :category_id
     validates :condition_id
     validates :prefecture_id
@@ -23,9 +24,9 @@ class Product < ApplicationRecord
   end
 
   # priceの半角数字入力と数値の範囲指定
-  validates :price, presence: true, format: { with: /\A[-]?[0-9]+(\.[0-9]+)?\z/ , message: 'You must use half-width characters.' } ,numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
+  validates :price, presence: true, format: { with: /\A-?[0-9]+(\.[0-9]+)?\z/, message: 'You must use half-width characters.' }, numericality: { only_integer: true, greater_than: 0 }
 
-  #アソシエーション
+  # アソシエーション
   has_one_attached :image
   belongs_to :user
   has_one    :order

@@ -71,7 +71,6 @@
     <div class="items-detail">
       <div class="weight-bold-text question-text">
         <span>配送について</span>
-        <a class="question" href="#">?</a>
       </div>
       <div class="form">
         <div class="weight-bold-text">
@@ -95,10 +94,6 @@
 
     <%# 販売価格 %>
     <div class="sell-price">
-      <div class="weight-bold-text question-text">
-        <span>販売価格<br>(¥300〜9,999,999)</span>
-        <a class="question" href="#">?</a>
-      </div>
       <div>
         <div class="price-content">
           <div class="price-text">
@@ -106,7 +101,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"product-price", placeholder:"例）3000" %>
+          <%= f.text_field :price, class:"price-input", id:"product-price", placeholder:"半角で入力して下さい" %>
         </div>
         <div class="price-content">
           <span>販売手数料 (10%)</span>
