@@ -15,17 +15,17 @@
   <% @products.each do |product| %>
     <li class='list'>
       <%= link_to product_path(product) do %>
-      <div class='item-img-content'>
-        <%= image_tag product.image.variant(resize: '300x300'), class: "item-img" %>
+      <div class='product-img-content'>
+        <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
       </div>
-      <div class='item-info'>
-        <h3 class='item-name'>
+      <div class='product-info'>
+        <h3 class='product-name'>
           <%= product.name %>
         </h3>
-        <div class='item-quantity'>
+        <div class='product-quantity'>
           <%= product.quantity %>
         </div>
-        <div class='item-price'>
+        <div class='product-price'>
           <span><%= product.price %>円<br>(税込み)</span>
         </div>
       </div>
