@@ -31,6 +31,7 @@
 | user             | references | null: false, foreign_key: true |
 
 ### Association
+- has_one_attached :image
 - belongs_to :user
 - has_many   :comments
 - has_one    :order
@@ -53,7 +54,7 @@
 ## addressテーブル
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| post_code     | string     | null: false                    |
+| postal_code   | string     | null: false                    |
 | prefecture_id | integer    | null: false                    |
 | city          | string     | null: false                    |
 | house_number  | string     | null: false                    |

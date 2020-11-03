@@ -16,18 +16,20 @@
     <li class='list'>
       <%= link_to product_path(product) do %>
       <div class='product-img-content'>
-        <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
-      </div>
-      <div class='product-info'>
-        <h3 class='product-name'>
-          <%= product.name %>
-        </h3>
-        <div class='product-quantity'>
-          <%= product.quantity %>
+        <% if product.order == nil %>
+          <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
         </div>
-        <div class='product-price'>
-          <span><%= product.price %>円<br>(税込み)</span>
-        </div>
+        <div class='product-info'>
+          <h3 class='product-name'>
+            <%= product.name %>
+          </h3>
+          <div class='product-quantity'>
+            <%= product.quantity %>
+          </div>
+          <div class='product-price'>
+            <span><%= product.price %>円<br>(税込み)</span>
+          </div>
+        <% end %>
       </div>
       <% end %>
     </li>
