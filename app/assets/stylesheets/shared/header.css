@@ -1,0 +1,26 @@
+.top-page-header {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(203, 193, 193);
+  padding: 16px 32px;
+}
+
+.app-title {
+  /* padding: 16px 32px; */
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.btn-list {
+  display: flex;
+}
+
+.lists-right {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.button {
+  margin-left: 5px;
+}

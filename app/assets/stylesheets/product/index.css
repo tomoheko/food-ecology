@@ -1,4 +1,8 @@
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.top-image {
+  width: 100vw;
+  height: 200px
+}
+
 .title-contents {
   width: 100vw;
   background-image: image-url('top-image.png');

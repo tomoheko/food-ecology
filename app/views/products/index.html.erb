@@ -1,39 +1,49 @@
 <%= render "shared/header" %>
 <div class='main'>
-  <%= image_tag "top-image.png" %>
+  <div class="top-image">
+    <div class="top-left-image">
+    <%= image_tag "top2.png" %>
+      <%# <div class="top-right-image"> %>
+        <%#= image_tag "top3.jpg" %>
+        <%#= image_tag "shopping-cart.png" %>
+      <%# </div> %>
+    </div>
+  </div>  
   <div class='title-contents'>
     <h2>
       それ捨てるんですか？
     </h2>
     <p class='service-explain'>
-      FoodEcologyはだれでもかんたんに出品・購入できる
+      FoodEcologyは、まだ食べられる食品を
     </p>
     <p class='service-explain'>
-      食品リサイクルアプリです
+      消費者と繋ぐアプリです。
     </p>
   </div>
+
+  <div class="all-product">
+    <h3>商品一覧</h3>
   <% @products.each do |product| %>
     <li class='list'>
       <%= link_to product_path(product) do %>
-      <div class='product-img-content'>
-        <% if product.order == nil %>
-          <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
+      <div class='item-img-content'>
+        <%= image_tag product.image.variant(resize: '300x300'), class: "item-img" %>
+      </div>
+      <div class='item-info'>
+        <h3 class='item-name'>
+          <%= product.name %>
+        </h3>
+        <div class='item-quantity'>
+          <%= product.quantity %>
         </div>
-        <div class='product-info'>
-          <h3 class='product-name'>
-            <%= product.name %>
-          </h3>
-          <div class='product-quantity'>
-            <%= product.quantity %>
-          </div>
-          <div class='product-price'>
-            <span><%= product.price %>円<br>(税込み)</span>
-          </div>
-        <% end %>
+        <div class='item-price'>
+          <span><%= product.price %>円<br>(税込み)</span>
+        </div>
       </div>
       <% end %>
     </li>
   <% end %>
+  </div>
 </div>
 
 
