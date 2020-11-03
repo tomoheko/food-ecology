@@ -1,5 +1,4 @@
 function productPrice() {
-  // 金額を入力した数値をpriceInputという変数に格納する
 const priceInput = document.getElementById("product-price");
 priceInput.addEventListener("input", () => {
   const inputValue = priceInput.value; // inputValue:価格
