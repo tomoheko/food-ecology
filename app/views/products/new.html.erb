@@ -1,3 +1,4 @@
+<%= render "shared/header" %>
 <div class="products-sell-contents">
   <header class="products-sell-header">
 
@@ -34,7 +35,7 @@
           数量
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :quantity, class:"product-input", id:"product-quantity", placeholder:"例）単位まで入力してください" %>
+        <%= f.text_field :quantity, class:"products-input", id:"product-quantity", placeholder:"単位まで入力してください。例）10kg,100本" %>
       </div>
       
       <div class="products-explain">
@@ -86,7 +87,6 @@
         <%= f.collection_select(:shipment_term_id, ShipmentTerm.all, :id, :name, {}, {class:"select-box", id:"product-category"}) %>
       </div>
     </div>
-    <%# /配送について %>
 
     <%# 販売価格 %>
     <div class="sell-price">
@@ -122,8 +122,5 @@
     
   </div>
   <% end %>
-
-  <footer class="products-sell-footer">
-
-  </footer>
 </div>
+<%= render "shared/footer" %>

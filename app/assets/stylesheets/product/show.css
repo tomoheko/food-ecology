@@ -70,7 +70,7 @@
 
 .buy-edit-btn {
   text-align: center;
-  background-color: #1ba7e7;
+  /* background-color: #1ba7e7; */
   background-color: #0fb67e;
   font-size: 20px;
   /* font-weight: bold; */
@@ -79,7 +79,17 @@
   padding: 2vh 6vw;
   border-radius: 100px;
   border: 1px solid #0b0c0c;
+  box-shadow:0 3px 0 #716767;
 }
+.buy-edit-btn:hover {
+  opacity: 0.6;
+}
+.buy-edit-btn:active {
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}
+
 
 .or-text {
   font-size: 20px;
@@ -95,7 +105,17 @@
   padding: 2vh 10vw;
   border-radius: 100px;
   border: 1px solid #0b0c0c;
+  box-shadow:0 3px 0 #716767;
 }
+.product-destroy-btn:hover {
+  opacity: 0.6;
+}
+.product-destroy-btn:active {
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}
+
 
 .comment-box {
   width: 40vw;
@@ -130,4 +150,13 @@
   font-size: 20px;
   border-radius: 100px;
   margin-bottom: 2vh;
+  box-shadow:0 3px 0 #716767;
+}
+.comment-btn:hover {
+  opacity: 0.6;
+}
+.comment-btn:active {
+  box-shadow:none;
+  position:relative;
+  top:3px;
 }
