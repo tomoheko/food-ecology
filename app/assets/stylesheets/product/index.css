@@ -15,5 +15,66 @@
   justify-content: center;
   padding: 5vh 15vw;
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  margin: 0 0 500px 0;
+}
+
+.catchphrase {
+  margin: 10px 0 40px 0;
+  font-size: 32px;
+}
+
+.service-explain {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.product-lineup {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.font_weight {
+  font-weight: bolder;
+}
+
+.index-title{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.product-detail {
+  margin: 16px 16px;
+}
+
+.product-img {
+  width: 32vh;
+  height: 32vh;
+}
+
+.product-info {
+  display: block;
+}
+
+.product-name {
+  font-size: 2.5vh;
+  font-weight: bolder;
+}
+
+.product-quantity {
+  font-size: 2vh;
+  font-weight: bolder;
+}
+
+.product-price {
+  font-size: 2vh;
+  font-weight: bolder;
+}
+
+.product-shipment-fee {
+  font-size: 1.5vh;
 }
