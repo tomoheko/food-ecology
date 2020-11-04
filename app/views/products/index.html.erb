@@ -71,27 +71,29 @@
     </div>
     <div class="product-lineup">
     <% @products.each do |product| %>
-      <li class='product-detail'>
-        <%= link_to product_path(product) do %>
-        <div>
-          <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
-        </div>
-        <div class='product-info'>
-          <p class='product-name'>
-            <%= product.name %>
-          </p> 
-            <div class='product-quantity'>
-              <%= product.quantity %>
-            </div>
-            <div class='product-price'>
-              <span><%= product.price %>円(税込み)</span>
-            </div>
-          <div class='product-shipment-fee'>
-            <%= product.shipment_fee.name %>
+      <% if product.order == nil %>
+        <li class='product-detail'>
+          <%= link_to product_path(product) do %>
+          <div>
+            <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
           </div>
-        </div>
-        <% end %>
-      </li>
+          <div class='product-info'>
+            <p class='product-name'>
+              <%= product.name %>
+            </p> 
+              <div class='product-quantity'>
+                <%= product.quantity %>
+              </div>
+              <div class='product-price'>
+                <span><%= product.price %>円(税込み)</span>
+              </div>
+            <div class='product-shipment-fee'>
+              <%= product.shipment_fee.name %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
     <% end %>
     </div>
   </div>
