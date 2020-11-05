@@ -1,39 +1,101 @@
 <%= render "shared/header" %>
+
 <div class='main'>
-  <%= image_tag "top-image.png" %>
+  <div class="top-image">
+    <%= image_tag "top2.png" %>
+  </div>
   <div class='title-contents'>
-    <h2>
+    <h2 class='catchphrase'>
       それ捨てるんですか？
     </h2>
     <p class='service-explain'>
-      FoodEcologyはだれでもかんたんに出品・購入できる
+      FoodEcologyは、まだ食べられる食品を
     </p>
     <p class='service-explain'>
-      食品リサイクルアプリです
+      販売してくれるお店や加工業者、消費者と繋ぐアプリです。
     </p>
   </div>
-  <% @products.each do |product| %>
-    <li class='list'>
-      <%= link_to product_path(product) do %>
-      <div class='product-img-content'>
-        <% if product.order == nil %>
-          <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
-        </div>
-        <div class='product-info'>
-          <h3 class='product-name'>
-            <%= product.name %>
-          </h3>
-          <div class='product-quantity'>
-            <%= product.quantity %>
+  <%# コンセプト %>
+  <div class="app-concept">
+    <p>買い手売り手は、個人法人問わず自由です。</p>
+    <p>仕入れたものの見込み通りに売れず残ってしまった商品、手塩にかけて育てた農産物も見た目や形が悪く、出荷できなかったものなどは</p>
+    <p>まだ食べられる状態にも関わらず、行き場がなく廃棄されます。</p>
+    <p>在庫を抱えた業者は廃棄のコストがかかり、食品ロスも増えてしまいます。</p>
+    <p>しかし、まだ食べることはできるため、このような商品でもニーズはあると考えます。</p>
+    <p>例えば、収穫したばかりですが傷があり見た目が悪く、出荷されなかったトマトがあるとします。このようなケースでは見た目に問題があるだけで</p>
+    <p>味や鮮度には問題ないケースがほとんどのため、見た目が悪い分、価格を下げれば「それでもいいから欲しい」というニーズは、日々家計簿と睨めっこしている</p>
+    <p>主婦層の方々にはあるとかんがえます。調理すれば関係ないからです。</p>
+    <p>そのため、主婦に限らず飲食店などにもニーズはあると考えます。繰り返しになりますが、調理すれば関係ないからです。</p>
+    <p>ミートソースが見た目のいいトマトから出来ているかどうかなど関係ないですし、大事なのはむしろ鮮度です。</p>
+    <p>論点がズレましたが、販路の自由度が高い個人経営の飲食店なども対象だと考えています。</p>
+    <p>また、スーパーで販売されている納豆なども</p>
+    <p></p>
+    <p>このアプデはそのような物を対象に</p>
+    <p></p>
+  </div>
+  <%# 食品ロスの説明 %>
+  <div explain-issue>
+    <h2>食品ロスとは</h2>
+    <p>「食品ロス」とは、本来食べられるのに捨てられてしまう食品をのことである。</p>
+
+    <p>日本ではどれくらいの食品ロスが発生しているか？（下図参照）</p>
+    <p>日本の食品廃棄物等は年間2,550万t</p>
+    <p>その中で本来食べられるのに捨てられる食品「食品ロス」の量は年間612万t。（平成29年度推計値）</p>
+    <p>日本人の1人当たりの食品ロス量は1年で約48kgで、</p>
+    <p>これは<span class="font_weight">日本人1人当たりが毎日お茶碗一杯分のご飯を捨てている</span>のと同じ量になる。</p>
+
+    <p>食品ロスは大きく分けると下記2つに分けることが出来る。</p>
+    <p>事業活動を伴って発生する食品ロス・・「事業系食品ロス」</p>
+    <p>各家庭から発生する食品ロス・・・・・「家庭系食品ロス」</p>
+
+    <p>612万tのうち</p>
+    <p>事業系食品ロスは328万t</p>
+    <p>家庭系食品ロスは284万tとなっている。</p>
+
+    <p>事業系の食品ロスは更に4業種に分類することができる。</p>
+    <p>食品製造業・・121万t</p>
+    <p>食品卸売業・・16万t</p>
+    <p>食品小売業・・64万t</p>
+    <p>外食産業・・・127万t</p>
+
+    <p>食品ロスを減らすためには、家で食品ロスが出ないようにするだけでなくて、食べ物を買うお店、食べるお店でも食品ロスを減らすことを意識することが大切。</p>
+    <p>例えば、食べ物を買うお店や食べるお店では、奥から商品をとらずに、陳列されている賞味期限の順番に買ったり、</p>
+    <p>包装資材（段ボール）ごと買う場合に、段ボールにちょっとのキズ・汚れがあっても、中身が問題なければそのまま買ったり(PDF : 326KB)、</p>
+    <p>賞味期限の近い値引き商品を買ったり、食べきれる分量を注文して、食べ残しを出さなかったり、みんなのちょっとした行動で食品ロスを減らすことができる。</p>
+  </div>
+  <%# 商品一覧表示 %>
+  <div class="product-index">
+    <div class="index-title">
+      <h3>商品一覧（新着順）</h3>
+    </div>
+    <div class="product-lineup">
+    <% @products.each do |product| %>
+      <% if product.order == nil %>
+        <li class='product-detail'>
+          <%= link_to product_path(product) do %>
+          <div>
+            <%= image_tag product.image.variant(resize: '300x300'), class: "product-img" %>
           </div>
-          <div class='product-price'>
-            <span><%= product.price %>円<br>(税込み)</span>
+          <div class='product-info'>
+            <p class='product-name'>
+              <%= product.name %>
+            </p> 
+              <div class='product-quantity'>
+                <%= product.quantity %>
+              </div>
+              <div class='product-price'>
+                <span><%= product.price %>円(税込み)</span>
+              </div>
+            <div class='product-shipment-fee'>
+              <%= product.shipment_fee.name %>
+            </div>
           </div>
-        <% end %>
-      </div>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-  <% end %>
+    <% end %>
+    </div>
+  </div>
 </div>
 
 

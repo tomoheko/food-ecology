@@ -1,4 +1,4 @@
-<%= render "shared/second-header"%>
+<%= render "shared/header" %>
 
 <div class='transaction-contents'>
   <div class='transaction-main'>
@@ -12,6 +12,7 @@
         <h2 class='buy-product-text'>
           <%= @product.name %>
         </h2>
+        <p class='product-quantity-text'><%= @product.quantity %></p>
         <div class='buy-product-price'>
           <p class='product-price-text'>¥<%= @product.price %></p>
           <p class='product-price-sub-text'>（税込）送料込み</p>
@@ -118,9 +119,9 @@
       </div>
     </div>
     <div class='buy-btn'>
-      <%= f.submit "購入" ,class:"buy-red-btn" %>
+      <%= f.submit "購入" ,class:"buy-green-btn" %>
     </div>
     <% end %>
   </div>
 </div>
-<%= render "shared/second-footer"%>
+<%= render "shared/footer"%>

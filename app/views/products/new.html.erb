@@ -1,12 +1,10 @@
+<%= render "shared/header" %>
 <div class="products-sell-contents">
   <header class="products-sell-header">
-
   </header>
   <div class="products-sell-main">
     <h2 class="products-sell-title">商品の情報を入力</h2>
     <%= form_with model:@product, url:products_path, local: true do |f| %>
-
-    <%# エラー発生時のメッセージ %>
     <%= render 'shared/error_messages',locals: { message:@message }, model: f.object %>
 
     <%# 出品画像 %>
@@ -22,7 +20,7 @@
         <%= f.file_field :image, id:"product-image" %>
       </div>
     </div>
-    <%# /出品画像 %>
+
     <%# 商品名と商品説明 %>
     <div class="new-products">
       <div class="weight-bold-text">
@@ -36,7 +34,7 @@
           数量
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :quantity, class:"product-input", id:"product-quantity", placeholder:"例）10kg,100箱など" %>
+        <%= f.text_field :quantity, class:"products-input", id:"product-quantity", placeholder:"単位まで入力してください。例）10kg,100本" %>
       </div>
       
       <div class="products-explain">
@@ -44,10 +42,9 @@
           商品の説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :explanation, class:"products-text", id:"product-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :explanation, class:"products-text", id:"product-info", placeholder:"商品説明（必須 1,000文字まで）（商品の状態、定価など）例）見た目は出荷基準以下ですが味・鮮度は出荷ひんと変わりません。" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    <%# /商品名と商品説明 %>
 
     <%# 商品の詳細 %>
     <div class="products-detail">
@@ -65,7 +62,6 @@
         <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"product-sales-status"}) %>
       </div>
     </div>
-    <%# /商品の詳細 %>
 
     <%# 配送について %>
     <div class="products-detail">
@@ -90,7 +86,6 @@
         <%= f.collection_select(:shipment_term_id, ShipmentTerm.all, :id, :name, {}, {class:"select-box", id:"product-category"}) %>
       </div>
     </div>
-    <%# /配送について %>
 
     <%# 販売価格 %>
     <div class="sell-price">
@@ -117,18 +112,14 @@
         </span>
       </div>
     </div>
-    <%# /販売価格 %>
-
     
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "出品する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-    <%# /下部ボタン %>
+    
   </div>
   <% end %>
-
-  <footer class="products-sell-footer">
-  </footer>
 </div>
+<%= render "shared/footer" %>

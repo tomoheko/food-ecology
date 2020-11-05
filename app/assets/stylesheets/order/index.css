@@ -1,0 +1,166 @@
+.transaction-contents {
+  width: 100vw;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  background-image: url("wood1.jpg");
+}
+
+.transaction-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 10vw;
+}
+
+.transaction-title-text {
+  text-align: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+/* 購入内容の表示 */
+.buy-product-info {
+  height: 150px;
+  border-bottom: 2px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-product-img {
+  margin-right: 20px;
+  height: 130px;
+  width: 250px;
+  object-fit: contain;
+}
+
+.buy-product-right-content {
+  display: block;
+}
+
+.buy-product-text {
+  font-size: 20px;
+}
+
+.buy-product-price {
+  display: flex;
+  font-weight: bolder;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-quantity-text {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.product-price-text {
+  font-size: 15px;
+}
+
+.product-price-sub-text {
+  font-size: 12px;
+}
+
+/* 支払額の表示 */
+.product-payment {
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.product-payment-title {
+  font-size: 20px;
+}
+
+.product-payment-price {
+  font-size: 25px;
+}
+
+/* カード情報の入力 */
+.credit-card-form {
+  border-bottom: 2px solid #f5f5f5;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+
+.info-input-haedline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+.card-logo {
+  width: 40px;
+  margin: 5px 5px;
+}
+
+.input-expiration-date-wrap {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  line-height: 55px;
+}
+
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
+
+/* 配送先の入力 */
+.shipping-address-form {
+  margin-top: 15px;
+}
+
+.form-any {
+  background: #ccc;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.buy-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.buy-green-btn {
+  width: 100%;
+  background-color: #0fb67e;
+  border: 1px solid #000000;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow:0 3px 0 #716767;
+}
+.buy-green-btn:hover {
+  opacity: 0.6;
+}
+.buy-green-btn:active {
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}

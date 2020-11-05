@@ -1,15 +1,18 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
-
+  <div class="app-title">
+    <h1 class="title is-1"><%= link_to 'Food Ecology', root_path, class: "title" %></h1>
+  </div>
+  
+  <div class="btn-list">
     <ul class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to 'マイページ', "#", class: "user-nickname"  %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-        <li><%= link_to '出品する', new_product_path, class: "sell-product" %></li>
+        <button class="button is-success is-active"><%= link_to 'マイページ', "#", class: "user-nickname"  %></button>
+        <button class="button is-success is-active"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></button>
+        <button class="button is-success is-active"><%= link_to '出品する', new_product_path, class: "sell-product" %></button>
       <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-        <li><%= link_to '出品する', new_user_session_path, class: "sell-product" %></li> <%#ログイン画面に遷移させる%>
+        <button class="button is-success is-active"><%= link_to 'ログイン', new_user_session_path, class: "login" %></button>
+        <button class="button is-success is-active"><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></button>
+        <button class="button is-success is-active"><%= link_to '出品する', new_user_session_path, class: "sell-product" %></button><%#ログイン画面に遷移させる%>
       <% end %>
     </ul>
   </div>

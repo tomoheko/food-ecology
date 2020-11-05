@@ -1,5 +1,7 @@
 <%= render "shared/header" %>
-
+<div class="show-image">
+    <%#= image_tag "wood1.jpg", class:"show-image" %>
+</div>
 <%# 商品の概要 %>
 <div class="product-show">
   <div class="product-box">
@@ -8,39 +10,28 @@
     </h2>
     <div class='product-img-content'>
       <%= image_tag @product.image ,class:"product-box-img" %>
-      <%# 商品が売れていればsold outを表示 %>
-        <% if product.order != nil %>
-          <div class='sold-out'>
-            <span>Sold Out!!</span>
-          </div>
-        <% end %>
     </div>
     <div class="product-price-box">
-      <span class="product-price">
-        <%= @product.price %>
-      </span>
+      <p>価格： <span class="product-price"><%= @product.price %></span> 円</p>
       <span class="product-postage">
         (税込) 送料込み
       </span>
     </div>
-    
-    <% if @product.order == nil %>
-      <%# ログインユーザーと出品ユーザーが、同一人物かどうかで表示を分ける%>
-      <% if user_signed_in? && current_user.id == @product.user.id %>  
-        <%= link_to '商品の編集', edit_product_path, method: :get, class: "product-red-btn" %>
-        <p class='or-text'>or</p>
-        <%= link_to '削除', product_path, method: :delete, class:'product-destroy' %>
-      <% elsif user_signed_in? && current_user.id != @product.user.id %>
-      <%# ログインユーザーと出品ユーザーが異なっていて、まだ商品が売れていない場合 %>
-        <%= link_to '購入画面に進む', product_orders_path(@product) ,class:"product-red-btn"%>
-      <% end %>
-    <%# end %>
 
-    <div class="product-explain-box">
-      <span><%= @product.explanation %></span>
-    </div>
     <table class="detail-table">
       <tbody>
+        <tr>
+          <th class="detail-product">商品名</th>
+          <td class="detail-value"><%= @product.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-product">数量</th>
+          <td class="detail-value"><%= @product.quantity %>円</td>
+        </tr>
+        <tr>
+          <th class="detail-product">商品説明</th>
+          <td class="detail-value"><%= @product.explanation %></td>
+        </tr>
         <tr>
           <th class="detail-product">出品者</th>
           <td class="detail-value"><%= @product.user.nickname %></td>
@@ -67,6 +58,18 @@
         </tr>
       </tbody>
     </table>
+
+    <% if @product.order == nil %>
+      <%# ログインユーザーと出品ユーザーが、同一人物かどうかで表示を分ける%>
+      <% if user_signed_in? && current_user.id == @product.user.id %>  
+        <%= link_to '商品情報の編集', edit_product_path, method: :get, class: "buy-edit-btn" %>
+        <p class='or-text'>or</p>
+        <%= link_to '削 除', product_path, method: :delete, class:'product-destroy-btn' %>
+      <% elsif user_signed_in? && current_user.id != @product.user.id %>
+      <%# ログインユーザーと出品ユーザーが異なっていて、まだ商品が売れていない場合の表示 %>
+        <%= link_to '購入画面に進む', product_orders_path(@product) ,class:"buy-edit-btn"%>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="comment-box">
@@ -78,10 +81,10 @@
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
       <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
         <span>コメントする<span>
       </button>
     </form>
+  </div>
   </div>
 </div>
 

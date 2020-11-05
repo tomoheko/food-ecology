@@ -1,0 +1,44 @@
+.top-page-header {
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(203, 193, 193);
+  padding: 16px 32px;
+  position: fixed;
+}
+
+.app-title {
+  padding:  0 32px;
+  font-family: 'Kosugi Maru', sans-serif;
+  text-align: center;
+}
+
+.btn-list {
+  display: flex;
+}
+
+.lists-right {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  text-align: center;
+}
+
+.button {
+  margin-left: 5px;
+  color: rgb(197, 43, 43);
+  display: inline-block;
+  padding: 0.6em 2em;
+  margin: 0 0 5px;
+  cursor: pointer;
+  transition: all 0.1s ease 0s;
+}
+.button:hover {
+  opacity: 0.6;
+}
+.button:active {
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}
