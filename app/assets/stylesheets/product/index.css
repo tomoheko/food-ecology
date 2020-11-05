@@ -16,7 +16,7 @@
   padding: 5vh 15vw;
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  margin: 0 0 500px 0;
+  margin: 0 0 440px 0;
 }
 
 .catchphrase {
@@ -25,8 +25,34 @@
 }
 
 .service-explain {
-  margin: 20px 0;
+  margin: 23px 0;
   font-size: 16px;
+}
+
+.app-concept{
+  display: block;
+  justify-content: center;
+  padding: 16vh 0;
+  background-color: rgb(231, 249, 212);
+}
+
+.app-whats{
+  text-align: center;
+  font-size: 4vh;
+  font-weight: bolder;
+  margin-bottom: 5vh;
+}
+
+.app-explanation{
+  text-align: center;
+  font-size: 2.5vh;
+  line-height: 5vh
+}
+
+.underline{
+  font-weight: bold;
+  /* color: red; */
+  background: linear-gradient(transparent 60%, #ff99ff 60%);
 }
 
 .product-lineup {
@@ -45,10 +71,12 @@
   font-size: 3.5vh;
   font-weight: bold;
   margin-bottom: 5vh;
+
 }
 
 .product-detail {
   margin: 16px 16px;
+  display: block;
 }
 
 .product-img {
@@ -71,7 +99,7 @@
 }
 
 .product-price {
-  font-size: 2vh;
+  font-size: 3vh;
   font-weight: bolder;
 }
 
