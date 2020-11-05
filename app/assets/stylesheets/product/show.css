@@ -1,5 +1,10 @@
+.show-image {
+  background-image: image-url("wood1.png");
+}
+
 .product-show {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  background-image: image-url("wood1.png");
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -8,7 +13,7 @@
 }
 
 .product-box {
-  background-color: #FFF;
+  /* background-color: #FFF; */
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -141,7 +146,7 @@
 
 .comment-btn {
   line-height: 48px;
-  background-color: #3c5ece;
+  background-color: #898c94;
   /* background-color: #0fb67e; */
   border: 1px solid #0b0c0c;
   color: #fff;
