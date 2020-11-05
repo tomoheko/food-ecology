@@ -1,10 +1,6 @@
-.show-image {
-  background-image: image-url("wood1.png");
-}
-
 .product-show {
   /* background-color: #f8f8f8; */
-  background-image: image-url("wood1.png");
+  background-image: url("wood1.jpg");
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -13,9 +9,9 @@
 }
 
 .product-box {
-  /* background-color: #FFF; */
+  background-color: #FFF;
   width: 70vw;
-  min-width: 1200px;
+  /* min-width: 120px; */
   padding: 10vh 15vw;
   display: flex;
   flex-direction: column;
