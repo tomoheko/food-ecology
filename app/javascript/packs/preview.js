@@ -12,7 +12,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
       ImageList.appendChild(imageElement);
     };
 
-    document.getElementById('image-list').addEventListener('change', function(e){
+    document.getElementById('product-image').addEventListener('change', function(e){
       const imageContent = document.querySelector('img');
       if (imageContent){
         imageContent.remove();
