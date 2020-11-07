@@ -1,18 +1,16 @@
 class CommentsController < ApplicationController
-  def new
-    @comments = Comment.all
-    # @comment = Comment.new(comment_params)
-  end
-
   def create
+    @product = Product.find(params[:product_id])
     @comment = Comment.new(comment_params)
     if @comment.save
-      ActionCable.server.broadcast 'comment_channel', content: @comment
+      redirect_to product_path(@product)
+    else
+      redirect_to product_path(@product)
     end
   end
 
+  private
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, product_id: params[:product_id])
   end
-
 end
