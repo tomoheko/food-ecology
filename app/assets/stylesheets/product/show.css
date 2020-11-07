@@ -159,3 +159,21 @@
   position:relative;
   top:3px;
 }
+
+.comment-title {
+  text-align: center;
+  color: navy;
+}
+
+.comment-index {
+  background-color: #fff;
+  width: 60vw;
+  padding:  1vh 5vw 2vh;
+  
+}
+
+.comment-sentence {
+  border-bottom: 1px solid #0b0c0c;
+  margin-bottom: 2vh;
+  color: navy;
+}
