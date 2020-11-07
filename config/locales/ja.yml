@@ -1,0 +1,28 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        family_name: お名前（姓）
+        first_name: お名前（名）
+        birth_date: 生年月日
+      product:
+        name: 商品名
+        image: 画像
+        quantity: 数量
+        explanation: 商品の説明
+        category_id: 商品のカテゴリー
+        condition_id: 商品の状態
+        shipment_fee_id: 配送料の負担
+        prefecture_id: 発送元の地域
+        shipment_term_id: 発送までの日数
+        price: 価格
+      order_form:
+        token: カード情報
+        postal_code: 郵便番号
+        prefecture_id: 都道府県
+        city: 地区町村
+        house_number: 番地
+        phone_number: 電話番号

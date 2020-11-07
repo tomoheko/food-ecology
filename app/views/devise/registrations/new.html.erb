@@ -53,8 +53,8 @@
       <span class="indispensable">必須</span>
     </div>
     <div class='input-name-wrap'>
-      <%= f.text_area :family_name, class:"input-name", id:"first-name", placeholder:"例) フード" %>
-      <%= f.text_area :first_name, class:"input-name", id:"last-name", placeholder:"例) 太郎" %>
+      <%= f.text_area :family_name, class:"input-name", id:"first-name", placeholder:"（姓）" %>
+      <%= f.text_area :first_name, class:"input-name", id:"last-name", placeholder:"（名）" %>
     </div>
   </div>
   <div class="form-group">
@@ -70,7 +70,7 @@
           id:"birth-date",
           use_month_numbers: true,
           prompt:'--',
-          start_year: 1930,
+          start_year: 1920,
           end_year: (Time.now.year - 5),
           date_separator: '%s'),
         "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
