@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :abouts, only:[:index]
   resources :products do
     resources :orders, only:[:index, :create]
+    resources :comments, only:[:new, :create]
   end
 end
