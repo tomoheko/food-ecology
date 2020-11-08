@@ -13,10 +13,10 @@
   font-weight: bolder;
   margin-bottom: 8vh;
 }
-.about-title>h2:first-letter {
+/* .about-title>h2:first-letter {
   font-size: 1.5em;
   color:  #7db4e6;
-}
+} */
 
 .question-title {
   font-size: 3.5vh;
@@ -35,8 +35,6 @@
 .question-container {
   margin-bottom: 8vh;
 }
-
-
 
 .graph-image {
   height: 400px;
