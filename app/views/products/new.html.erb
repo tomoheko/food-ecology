@@ -28,14 +28,14 @@
         商品名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"products-text", id:"product-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :name, class:"products-text", id:"product-name", placeholder:"商品名（必須 40文字まで)" ,rows:"2", maxlength:"40" %>
       
       <div class="products-quantity">
         <div class="weight-bold-text">
           数量
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :quantity, class:"products-input", id:"product-quantity", placeholder:"単位まで入力してください。例）10kg,100本" %>
+        <%= f.text_field :quantity, class:"products-input", id:"product-quantity", placeholder:"単位まで入力してください。" %>
       </div>
       
       <div class="products-explain">
@@ -43,7 +43,7 @@
           商品の説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :explanation, class:"products-text", id:"product-info", placeholder:"商品説明（必須 1,000文字まで）（商品の状態、定価など）例）見た目は出荷基準以下ですが味・鮮度は出荷ひんと変わりません。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :explanation, class:"products-text", id:"product-info", placeholder:"商品説明（必須 400文字まで）（商品の状態、定価など）" ,rows:"5" ,maxlength:"400" %>
       </div>
     </div>
 

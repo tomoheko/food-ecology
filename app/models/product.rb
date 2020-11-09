@@ -8,10 +8,10 @@ class Product < ApplicationRecord
 
   # 空の投稿を保存できないようにする
   with_options presence: true do
-    validates :name
+    validates :name, length: { maximum: 40 }
     validates :image
     validates :quantity
-    validates :explanation
+    validates :explanation, length: { maximum: 300 }
   end
 
   # #ジャンルの選択が「--」の時は保存できないようにする
