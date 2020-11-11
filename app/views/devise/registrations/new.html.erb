@@ -4,12 +4,22 @@
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
-      会員情報入力
+      新規会員登録
     </h1>
   </div>
-
-    <%= render 'shared/error_messages', model: f.object %>
-
+  <%# エラーメッセージ %>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class='sns-btn-wrap'>
+    <div class='sns-btn'>
+      <%= f.submit "facebookで新規登録" ,class:"facebook-btn" %>
+    </div>
+    <div class='sns-btn'>
+      <%= f.submit "twitterで新規登録" ,class:"twitter-btn" %>
+    </div>
+    <div class='sns-btn'>
+      <%= f.submit "Google+で新規登録" ,class:"google-btn" %>
+    </div>
+  </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ユーザー名</label>
