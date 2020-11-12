@@ -145,4 +145,5 @@ Food Ecology
 【連絡先】
 久田智大 ヒサダトモヒロ   Gmail / dekirumadeyamenai@gmail.com    twitter / https://twitter.com/tomotech5
 
-![オレンジライン](images/orange-line.png "orange-line" )
+トップページ　https://gyazo.com/d36f849feced8eae164c1abaa6b96372
+食品ロス説明ページ　https://gyazo.com/c335641bdca176c720f6abec446e997d
