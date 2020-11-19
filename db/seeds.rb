@@ -1,3 +1,4 @@
 User.create(nickname:'aaa111', email:'aaa111@aaa111', password:'aaa111', family_name:'サンプル', first_name:'太郎', birth_date:'1920-01-01')
 User.create(nickname:'abc123', email:'abc123@abc123', password:'abc123', family_name:'サンプル', first_name:'次郎', birth_date:'1920-01-01')
-User.create(nickname:'石井琢朗', email:'ishii5@ishii5', password:'ishii5', family_name:'石井', first_name:'琢朗', birth_date:'1920-01-01')
+User.create(nickname:'上原浩治', email:'uehara19@uehara19', password:'uehara19', family_name:'上原', first_name:'浩治', birth_date:'1920-01-01')
+Product.create(name:'アーモンド', image:'#{Rails.root}/db/fixtures/img1.jpg', price:2000, quantity:2, explanation:2, category_id:2, condition_id:2, prefectue_id:1920-01-01, shipment_term_id:2, shipment_fee:2, user_id:1)
