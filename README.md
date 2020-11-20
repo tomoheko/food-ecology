@@ -68,9 +68,11 @@
  - 画像複数投稿機能<br>
 <br>
 
-### 【連絡先】
-久田智大 ヒサダトモヒロ   Gmail / dekirumadeyamenai@gmail.com    twitter / https://twitter.com/tomotech5<br>
+#### 【連絡先】
+久田智大 ヒサダトモヒロ<br>
+Gmail / dekirumadeyamenai@gmail.com<br>
+twitter / https://twitter.com/tomotech5<br>
 
-### 【参考ページ紹介動画】
+#### 【参考ページ紹介動画】
 トップページ  https://gyazo.com/d36f849feced8eae164c1abaa6b96372<br>
 食品ロス説明ページ  https://gyazo.com/c335641bdca176c720f6abec446e997d<br>
