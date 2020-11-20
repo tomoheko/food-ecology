@@ -1,5 +1,5 @@
 # 個人制作アプリ Food Ecology
-![top-image](https://gyazo.com/f4d24d9ff50d183243b882be5c9df59c "top-image")
+![preview1.png]
 
 
 ### 【アプリケーションの作成理由】
