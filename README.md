@@ -1,7 +1,4 @@
 # 個人制作アプリ Food Ecology
-![preview1.png]
-![top](/Users/tomohirohisada/projects/food-ecology/app/assets/images/preview1.png "top")
-
 
 ### 【アプリケーションの作成理由】
 1. <b>前職は飲食業界にいて、毎日売れ残った商品を捨てていた</b><br>
