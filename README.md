@@ -1,5 +1,6 @@
 # 個人制作アプリ Food Ecology
 ![preview1.png]
+![top](/Users/tomohirohisada/projects/food-ecology/app/assets/images/preview1.png "top")
 
 
 ### 【アプリケーションの作成理由】
