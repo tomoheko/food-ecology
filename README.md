@@ -1,5 +1,5 @@
 # 個人制作アプリ Food Ecology
-![qiita-square.png](https://qiita-image-store.s3.amazonaws.com/0/126861/90386757-fd96-8ba6-3477-485669713c55.png "qiita-square")
+![top-image](https://gyazo.com/f4d24d9ff50d183243b882be5c9df59c "top-image")
 
 
 ### 【アプリケーションの作成理由】
