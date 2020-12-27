@@ -1,0 +1,62 @@
+<header class='top-page-header'>
+  <div class="app-title">
+    <h1 class="title is-1"><%= link_to 'Food Ecology', root_path, class: "title" %></h1>
+  </div>
+
+  <%= form_with(url: search_products_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "商品を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+  
+  <div class="btn-list">
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <button><%= link_to '食品ロスとは', abouts_path, class: "about"  %></button>
+        <button><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></button>
+        <button><%= link_to '出品する', new_product_path, class: "sell-product" %></button>
+      <% else %>
+        <button><%= link_to '食品ロスとは', abouts_path, class: "about"  %></button>
+        <button><%= link_to 'ログイン', new_user_session_path, class: "login" %></button>
+        <button><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></button>
+        <button><%= link_to '出品する', new_user_session_path, class: "sell-product" %></button><%#ログイン画面に遷移させる%>
+      <% end %>
+    </ul>
+  </div>
+</header>
+
+  <%# 商品一覧表示 %>
+  <div class="product-index">
+    <div class="index-title">
+      <h3>検索結果（新着順）</h3>
+    </div>
+    <div class="product-lineup">
+    
+    </div>
+  </div>
+</div>
+
+<%# 参考にsearch_appのコード %>
+<h1>
+  検索結果
+</h1>
+<%# 検索結果の個数で条件分岐 %>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+    <td>
+    <br>
+    <li>
+      <%= result.name %>
+      <%= result.size %>
+      <%= result.status %>
+      <%= result.price %>
+      <%= result.category.name %>
+    </li>
+  <% end %>
+<% else %>
+  該当する商品はありません
+<% end %>
+<br>
+<%= link_to 'トップページへ戻る', root_path %>
+
+
+<%= render "shared/footer" %>

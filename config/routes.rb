@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :orders, only:[:index, :create]
     resources :comments, only:[:new, :create]
+    collection do
+      get 'search'
+    end
   end
 end
