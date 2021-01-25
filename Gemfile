@@ -66,3 +66,4 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem "aws-sdk-s3", require: false
 gem 'carrierwave'
+gem 'ransack'

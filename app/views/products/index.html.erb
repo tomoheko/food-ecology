@@ -1,12 +1,41 @@
-<%= render "shared/header" %>
+<header class='top-page-header'>
+  <div class="app-title">
+    <h1 class="title is-1"><%= link_to 'Food Ecology', root_path, class: "title" %></h1>
+  </div>
 
+  
+  <%= search_form_for @q do |f| %>
+    <div class="search-form">
+      <%= f.label :name, "商品検索", class: "search-title" %>
+      <%= f.search_field :name_cont , placeholder: "商品名を入力", class: "search-input" %>
+      <%= f.submit "検索", class: "search-btn" %>
+    </div>
+  <% end %>
+  
+  
+  
+  <div class="btn-list">
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <button><%= link_to '食品ロスとは', abouts_path, class: "about"  %></button>
+        <button><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></button>
+        <button><%= link_to '出品する', new_product_path, class: "sell-product" %></button>
+      <% else %>
+        <button><%= link_to '食品ロスとは', abouts_path, class: "about"  %></button>
+        <button><%= link_to 'ログイン', new_user_session_path, class: "login" %></button>
+        <button><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></button>
+        <button><%= link_to '出品する', new_user_session_path, class: "sell-product" %></button><%#ログイン画面に遷移させる%>
+      <% end %>
+    </ul>
+  </div>
+</header>
 <div class='main'>
   <div class="top-image">
     <%#= image_tag "top2.png" %>
   </div>
   <div class='title-contents'>
     <h2 class='catchphrase'>
-      それ捨てるんですか？
+      減らそう、食品ロス。
     </h2>
     <p class='service-explain'>
       FoodEcologyは、まだ食べられる食品を
@@ -19,7 +48,7 @@
   <div class="app-concept">
     <h2 class="app-whats">what's Food Ecology</h2>
     <div class="app-explanation">
-      <p>FoodEcologyは<span class="underline">「食品ロスを減らす」</span>というコンセプトを元に作られた、生産者と消費者を繋ぐアプリケーションです。</p>
+      <p>FoodEcologyは<span class="underline">「食品ロスを減らす」</span>というコンセプトの下に作られた、生産者と消費者を繋ぐアプリケーションです。</p>
       <p>当サイトでは賞味期限切れの商品も取り扱い、買い手・売り手は、個人法人問わず、誰でも出品・購入が可能です。</p>
       <p>在庫を抱え過ぎて賞味期限が切れてしまった商品や、傷やサイズの問題で出荷できなかった野菜など、</p>
       <p>何らかの理由で店頭に陳列することが出来なくなった商品は、<b>まだ安全に食べることができるのに、捨てられるしかありません。</b></p>

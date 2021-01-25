@@ -33,4 +33,13 @@ class Product < ApplicationRecord
   belongs_to :user
   has_one    :order
   has_many   :comments
+
+  # 検索機能
+  def self.search(search)
+    if search != ""
+      Product.where('text LIKE(?)', "%#{search}%")
+    else
+      Product.all
+    end
+  end
 end

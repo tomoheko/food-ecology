@@ -4,6 +4,8 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all.order("created_at DESC")
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
   end
 
   def new
@@ -45,6 +47,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  def search
+    @products = Product.search(params[:keyword])
+  end
 
   private
 

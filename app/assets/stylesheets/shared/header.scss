@@ -33,8 +33,9 @@ button {
   margin-left: 5px;
   background-color: rgb(234, 174, 70);
   display: inline-block;
-  padding: 0.4em 2em;
-  margin: 0 2px 5px;
+  width: 120px;
+  height: 44px;
+  margin: 0 3px;
   cursor: pointer;
   transition: all 0.1s ease 0s;
   font-weight: bold;
@@ -46,4 +47,38 @@ button:active {
   box-shadow:none;
   position:relative;
   top:3px;
+}
+
+//検索フォーム
+.search-form {
+  text-align: center;
+  margin-top: 1vh;
+  display: flex;
+  .search-title {
+    margin: 2% 1% 0 0;
+    width: 72px;
+    height: 28px;
+  }
+  .search-input {
+    margin: auto 0;
+    width: 280px;
+    height: 32px;
+    margin-right: 2%;
+    border-radius:0 2px 2px 0;
+  }
+  .search-btn {
+    margin: auto 0;
+    width: 50px;
+    height: 28px;
+    border-radius:0 2px 2px 0;
+  }
+  .search-btn:hover {
+    opacity: 0.6;
+  }
+  .search-btn:active {
+    box-shadow:none;
+    position:relative;
+    top:3px;
+  }
+  
 }
