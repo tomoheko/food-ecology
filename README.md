@@ -1,5 +1,19 @@
 # 【個人制作アプリ Food Ecology】
 ![](app/assets/images/preview2.png)
+<table>
+<tr>
+<td><img src="app/assets/images/preview2.png"></td>
+<td><img src="app/assets/images/preview3.png"></td>
+</tr>
+<tr>
+<td><img src="app/assets/images/preview4.png"></td>
+<td><img src="app/assets/images/preview5.png"></td>
+</tr>
+<tr>
+<td><img src="app/assets/images/preview6.png"></td>
+<td><img src="app/assets/images/preview7.png"></td>
+</tr>
+</table>
 
 ## 【アプリケーションの作成理由】
 1. <b>前職は飲食業界にいて、毎日売れ残った商品を捨てていた</b><br>
