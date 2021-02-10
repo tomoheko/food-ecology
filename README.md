@@ -2,16 +2,16 @@
 ![](app/assets/images/preview2.png)
 <table>
 <tr>
-<td><img src="app/assets/images/preview2.png"></td>
 <td><img src="app/assets/images/preview3.png"></td>
-</tr>
-<tr>
 <td><img src="app/assets/images/preview4.png"></td>
-<td><img src="app/assets/images/preview5.png"></td>
 </tr>
 <tr>
+<td><img src="app/assets/images/preview5.png"></td>
 <td><img src="app/assets/images/preview6.png"></td>
+</tr>
+<tr>
 <td><img src="app/assets/images/preview7.png"></td>
+<td><img src="app/assets/images/preview8.png"></td>
 </tr>
 </table>
 
