@@ -37,7 +37,7 @@
   - 農家など生産者は、本来なら流通の前段階で廃棄していた農作物を出荷でき、売り上げになる。<br>
 
 ## 【使用技術（開発環境）】
-  - 言語：HTML, SCSS, JavaScript,jQuery, Ruby
+  - 言語：HTML, SCSS, JavaScript, jQuery, Ruby
   - フレームワーク：Ruby on Rails
   - データベース：MySQL
   - ストレージ：AWS S3
